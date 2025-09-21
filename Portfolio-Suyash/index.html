@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suyash Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Fonts for ORV theme -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <<div class="start-screen show">
+  <h1 class="scenario-title">📖 Records of Suyash</h1>
+
+  <!-- Tagline -->
+  <p class="tagline">
+    “A new constellation has entered the stream.”<br>
+    You are viewing the portfolio of <strong> Suyash Abhijit Rane </strong>.
+  </p>
+
+  <!-- Narration Center -->
+  <div class="narration-box">
+    <p class="narration-text">In countless scenarios, I chose to code my own story.</p>
+    <p class="narration-text">Role: Full Stack GenAI Developer • Dreamer • Scenario Challenger</p>
+  </div>
+
+  <!-- Start Button -->
+  <button class="start-btn" id="start-btn">Enter the Scenario</button>
+</div>
+
+
+  <!-- === Main Menu === -->
+  <div class="main-menu hidden">
+    <h2>Main Menu</h2>
+    <ul>
+      <li data-screen="about">About</li>
+      <li data-screen="projects">Projects</li>
+      <li data-screen="experience">Experience</li>
+      <li data-screen="contact">Contact</li>
+      <li id="back-to-start">Exit</li>
+    </ul>
+  </div>
+
+  <!-- === About Section === -->
+  <div class="screen hidden" id="about">
+  <h2>About Me</h2>
+  <div class="about-container">
+    <!-- Left: Photo -->
+    <div class="about-photo">
+      <img src="images/me.jpg" alt="Suyash Abhijit Rane">
+    </div>
+    <!-- Right: Info -->
+    <div class="about-info">
+      <p>> Name: <strong>Suyash Abhijit Rane</strong></p>
+      <p>> Role: Full Stack GenAI Developer | Scenario Challenger</p>
+      <p>> Title: Vice President of ACES (Association Of Computer Engineering Students)</p>
+      <p>> Skills Equipped: Python, LLM, RAG, Flask, Next.js, AI/ML, Deployment</p>
+      <p>> Hobbies: Reading Novels/Manga → ORV, LOTM, One Piece</p>
+      <p>> Current Scenario: Building intelligent systems & crafting immersive digital journeys.</p>
+      <p>> Motto: <em>“In a world full of scenarios, I choose to code my own ending.”</em></p>
+    </div>
+  </div>
+  <p class="back">← Back to Menu</p>
+</div>
+
+ <!-- === Projects Section === -->
+<div class="screen hidden" id="projects">
+  <h2>Projects</h2>
+  <div class="project-list">
+
+    <!-- Portfolio -->
+    <div class="project-card">
+      <h3>⭐ Personal Portfolio</h3>
+      <p>A showcase of my journey, skills, and projects — designed with an <em>ORV-inspired theme</em> to reflect both creativity and technical expertise.</p>
+      <a href="https://your-portfolio-link.com" target="_blank" class="project-link">🔗 View Project</a>
+    </div>
+
+    <!-- Snowwlder -->
+    <div class="project-card">
+      <h3>⭐ Snowwlder: AI Resume Assistant</h3>
+      <p>Built with Streamlit + Google Gemini API to analyze resumes, provide AI-driven feedback, and calculate resume-to-JD match scores. Deployed on Streamlit Cloud.</p>
+      <a href="https://snowwlder.streamlit.app" target="_blank" class="project-link">🔗 View Project</a>
+    </div>
+
+    <!-- NFT Learning Platform -->
+    <div class="project-card">
+      <h3>⭐ AI-Powered NFT Learning Platform</h3>
+      <p>Created a personalized learning system with adaptive AI courses and secure, tamper-proof certificates. Features real-time skill tracking and employability insights.</p>
+      <a href="https://your-nft-link.com" target="_blank" class="project-link">🔗 View Project</a>
+    </div>
+
+    <!-- RAG Chatbot -->
+    <div class="project-card">
+      <h3>⭐ RAG Chatbot</h3>
+      <p>A retrieval-augmented chatbot built with Streamlit, Python, and Gemini API — capable of conversing with documents and answering context-aware queries.</p>
+      <a href="https://your-ragchat-link.com" target="_blank" class="project-link">🔗 View Project</a>
+    </div>
+
+  </div>
+  <p class="back">← Back to Menu</p>
+</div>
+
+
+ <!-- === Experience Section === -->
+<div class="screen hidden" id="experience">
+  <h2>Experience</h2>
+  <div class="experience-list">
+
+    <!-- Prepway Solutions -->
+    <div class="experience-card">
+      <h3>Prepway Solutions</h3>
+      <p class="role">Python and Data Science Intern</p>
+      <p class="date">Dec 2024 – Feb 2025</p>
+      <ul>
+        <li>Gained hands-on experience in Python programming.</li>
+        <li>Utilized NumPy and Pandas for data manipulation and analysis.</li>
+        <li>Learned basics of Scikit-learn.</li>
+        <li>Explored Flask and Streamlit for building and deploying simple web applications.</li>
+      </ul>
+    </div>
+
+    <!-- Rujark Tours & Travels -->
+    <div class="experience-card">
+      <h3>Rujark Tours & Travels LLP</h3>
+      <p class="role">Frontend Development Intern</p>
+      <p class="date">Jul 2025 – Present</p>
+      <ul>
+        <li>Developed a responsive travel booking website using Next.js and Tailwind CSS.</li>
+        <li>Integrated Google Sheets API for custom tour plan submissions.</li>
+        <li>Implemented dynamic forms with validation and backend APIs.</li>
+        <li>Deployed via Netlify with custom domain integration.</li>
+      </ul>
+    </div>
+
+    <!-- Mask Polymers Pvt LTD -->
+    <div class="experience-card">
+      <h3>Mask Polymers Pvt LTD</h3>
+      <p class="role">Frontend Developer (Lead)</p>
+      <p class="date">Jan 2025 – Jun 2025</p>
+      <ul>
+        <li>Designed and developed the user interface with Next.js.</li>
+        <li>Integrated a Supabase backend and Google Drive API.</li>
+        <li>Ensured a scalable and secure solution tailored to client needs.</li>
+      </ul>
+    </div>
+
+    <!-- VoltUP -->
+    <div class="experience-card">
+      <h3>VoltUP</h3>
+      <p class="role">AI/LLM Developer Intern</p>
+      <p class="date">Ongoing</p>
+      <ul>
+        <li>Built a RAG chatbot capable of conversing with documents.</li>
+        <li>Developed a web-scraping based chatbot using BeautifulSoup + LLMs to answer website queries.</li>
+        <li>Working on deployment and optimization for real-world usage.</li>
+      </ul>
+    </div>
+
+  </div>
+  <p class="back">← Back to Menu</p>
+</div>
+
+
+ <!-- === Contact Section === -->
+<div class="screen hidden" id="contact">
+  <h2>Contact</h2>
+  <div class="contact-container">
+
+    <!-- Left: Contact Form -->
+    <div class="contact-form">
+      <form action="https://formspree.io/f/yourFormID" method="POST">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="_replyto" required>
+
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Right: Contact Info -->
+    <div class="contact-info">
+      <p><strong>Email:</strong> ranesuyash2004@gmail.com</p>
+      <p><strong>Phone:</strong> +91-9404952061</p>
+      <p><strong>LinkedIn:</strong> 
+        <a href="linkedin.com/in/suyash-rane-4aaa84258/" target="_blank">linkedin.com/in/your-link</a>
+      </p>
+      <p><strong>GitHub:</strong> 
+        <a href="https://github.com/SUYASH2004/" target="_blank">github.com/your-github</a>
+      </p>
+      <p><strong>HackerRank:</strong> 
+        <a href="https://www.hackerrank.com/profile/ranesuyash2004" target="_blank">hackerrank.com/your-username</a>
+      </p>
+    </div>
+  </div>
+  <p class="back"> ← Back to Menu </p>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,438 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #000;
+  color: #eaeaea;
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.05) 1px, transparent 1px),
+                    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 200px 200px;
+}
+
+/* ===== Animated Stars (ORV world feel) ===== */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("images/stars-bg.png") repeat;
+  opacity: 0.15;
+  z-index: -1;
+  animation: starsMove 60s linear infinite;
+}
+
+@keyframes starsMove {
+  from { background-position: 0 0; }
+  to { background-position: 10000px 5000px; }
+}
+
+/* ===== Headings ===== */
+h1, h2 {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 1px;
+}
+
+h1 {
+  color: #f5d76e;
+  text-shadow: 0 0 12px rgba(245, 215, 110, 0.7);
+}
+
+h2 {
+  color: #9bd4f5; /* constellation blue */
+  text-shadow: 0 0 10px rgba(155, 212, 245, 0.6);
+}
+/* Centering the whole start-screen content */
+.start-screen {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #0d0d0f 0%, #000000 80%);
+  color: #f5f5f5;
+  font-family: 'Cinzel', serif; /* ✅ Universal Cinzel */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Title */
+.scenario-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #e6e6e6;
+  text-shadow: 0 0 15px rgba(180, 200, 255, 0.9);
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+  font-family: 'Cinzel', serif; /* ✅ ensure title also stays Cinzel */
+}
+
+/* Tagline under title */
+.tagline {
+  font-size: 1.1rem;
+  color: #cccccc;
+  margin: 1rem auto 2rem auto;
+  max-width: 650px;
+  line-height: 1.6;
+  font-style: italic;
+  text-align: center;
+  font-family: 'Cinzel', serif; /* ✅ changed to Cinzel */
+}
+
+.tagline strong {
+  color: #66fcf1;
+  font-style: normal;
+}
+
+/* Narration Box */
+.narration-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(20, 20, 30, 0.7);
+  border: 1px solid rgba(160, 180, 255, 0.4);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  max-width: 700px;
+  margin: 0 auto 2.5rem auto;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(120, 150, 255, 0.5);
+}
+
+.narration-text {
+  font-size: 1.0rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin: 0.5rem 0;
+  font-family: 'Cinzel', serif; /* ✅ changed to Cinzel */
+}
+
+/* Start button */
+.start-btn {
+  font-size: 1.1rem;
+  background: linear-gradient(135deg, #2e335a, #1c1f3a);
+  color: #f0f0f0;
+  padding: 0.6rem 1.5rem;  /* ✅ smaller button */
+  border-radius: 8px;
+  border: 1px solid rgba(160, 180, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Cinzel', serif; /* ✅ unified */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 0 10px rgba(120, 140, 255, 0.6);
+}
+
+.start-btn:hover {
+  background: linear-gradient(135deg, #40477c, #2a2d4f);
+  box-shadow: 0 0 20px rgba(150, 170, 255, 0.8);
+  transform: scale(1.05);
+}
+
+/* ===== Menu ===== */
+.main-menu {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* keeps everything in the center */
+  background: rgba(0,0,0,0.85);
+  z-index: 5;
+  text-align: center;
+}
+
+.main-menu h2 {
+  font-family: 'Cinzel', serif;
+  color: #66fcf1;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+/* Menu Items */
+.main-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;  /* stack vertically */
+  align-items: center;     /* center align */
+}
+
+.main-menu li {
+  display: block; 
+  width: auto;/* makes items fit text size */
+  min-width: 180px; /* keeps them same width, not too wide */
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  margin: 12px 0;
+  cursor: pointer;
+  padding: 10px 18px;
+  border: 1px solid #45a29e;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  color: #c5c6c7;
+  background: rgba(10, 10, 10, 0.5);
+}
+
+.main-menu li:hover {
+  background: #45a29e;
+  color: #0b0c10;
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(69, 162, 158, 0.6);
+}
+
+
+/* ===== Screen Layout ===== */
+.screen {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: rgba(20, 20, 20, 0.85);
+  border: 1px solid rgba(245, 215, 110, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(245, 215, 110, 0.15);
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== About Section ===== */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-photo img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #9bd4f5;
+  box-shadow: 0 0 20px rgba(155, 212, 245, 0.5);
+}
+
+.about-info {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.about-info strong {
+  color: #f5d76e;
+}
+
+.about-info em {
+  color: #9bd4f5;
+  font-style: italic;
+}
+
+/* ===== Projects ===== */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.project-card {
+  background: rgba(20, 20, 25, 0.85);
+  padding: 20px;
+  border-left: 4px solid #66fcf1;
+  border-radius: 6px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 0 20px rgba(102,252,241,0.4);
+}
+
+.project-card h3 {
+  margin: 0 0 8px 0;
+  font-family: 'Cinzel', serif;
+  font-size: 1.3rem;
+  color: #45a29e;
+}
+
+.project-card p {
+  margin: 0;
+  color: #c5c6c7;
+  line-height: 1.6;
+}
+
+
+/* ===== Back Button ===== */
+.back {
+  margin-top: 2rem;
+  cursor: pointer;
+  color: #bbb;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.back:hover {
+  color: #f5d76e;
+}
+
+/* ===== Hidden/Show ===== */
+.hidden { display: none; }
+.show { display: block; }
+
+/* ===== Thematic Character Touches ===== */
+/* Floating quotes like sponsor messages */
+/*body::after {
+  content: "『 Kim Dokja has entered the scenario 』  |  『 Han Sooyoung is watching with a smirk 』";
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.85rem;
+  color: rgba(245, 215, 110, 0.8);
+  font-style: italic;
+  animation: fadeQuotes 6s infinite alternate ease-in-out;
+}
+
+@keyframes fadeQuotes {
+  from { opacity: 0.2; }
+  to { opacity: 0.9; }
+} */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.experience-card {
+  background: rgba(15, 15, 20, 0.85);
+  padding: 20px;
+  border-left: 4px solid #45a29e;
+  border-radius: 6px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 0 20px rgba(69,162,158,0.4);
+}
+
+.experience-card h3 {
+  margin: 0;
+  font-family: 'Cinzel', serif;
+  font-size: 1.3rem;
+  color: #66fcf1;
+}
+
+.experience-card .role {
+  margin: 5px 0;
+  font-weight: 600;
+  color: #f5f5f5;
+}
+
+.experience-card .date {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.experience-card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #c5c6c7;
+  line-height: 1.6;
+}
+/* Contact Section Layout */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Left side: Form */
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  font-family: 'Cinzel', serif;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.contact-form button {
+  margin-top: 1.2rem;
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #2e335a, #1c1f3a);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Cinzel', serif;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: linear-gradient(135deg, #40477c, #2a2d4f);
+  transform: scale(1.05);
+}
+
+/* Right side: Info */
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.contact-info p {
+  margin: 0.8rem 0;
+  font-size: 1rem;
+}
+
+.contact-info a {
+  color: #66fcf1;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
